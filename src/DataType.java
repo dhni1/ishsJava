@@ -1,5 +1,6 @@
 public class DataType {
     public static void main(String[] args) {
+        // 충돌해결하는법
         // 데이터 타입과 형변환
         int score = 71;
         float gpa = 4.13F;
