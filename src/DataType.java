@@ -1,7 +1,7 @@
 public class DataType {
     public static void main(String[] args) {
         // 데이터 타입과 형변환
-        int score = 100;
+        int score = 71;
         float gpa = 4.13F;
         System.out.println(score);
         //콘솔에 내용 찍고 줄바꿈 해주는 메소드
