@@ -1,3 +1,7 @@
+package pokemons;
+
+import fly.Flyable;
+
 public abstract class Pokemon {
     private String name;
     //    protected String name;

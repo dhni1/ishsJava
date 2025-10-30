@@ -1,3 +1,10 @@
+import fly.NoFly;
+import fly.Wings;
+import pokemons.Charizard;
+import pokemons.Pikachu;
+import pokemons.Pokemon;
+import pokemons.Squirtle;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -43,25 +50,25 @@ public class GameDemo {
 
 
 
-//        Pokemon playerPokemon = new Pikachu(100, 27, new NoFly());
-//        Pokemon playerPokemon = new Charizard(200, 40, new Wings());
-//        Pokemon playerPokemon = new Squirtle(120, 21, new NoFly());
+//        pokemons.Pokemon playerPokemon = new pokemons.Pikachu(100, 27, new fly.NoFly());
+//        pokemons.Pokemon playerPokemon = new pokemons.Charizard(200, 40, new fly.Wings());
+//        pokemons.Pokemon playerPokemon = new pokemons.Squirtle(120, 21, new fly.NoFly());
 
 
-//        Jetpack jetpack = new Jetpack();
+//        fly.Jetpack jetpack = new fly.Jetpack();
 //
-//        Pikachu p1 = new Pikachu(100, 27, new NoFly());
-//        //p1.setFlyingTool(new NoFly());
+//        pokemons.Pikachu p1 = new pokemons.Pikachu(100, 27, new fly.NoFly());
+//        //p1.setFlyingTool(new fly.NoFly());
 //        p1.performFlyable();
 //        p1.setFlyingTool(jetpack);  // 젯팩 추진기 득템
 //        p1.performFlyable();
 //
-////        Pikachu p2 = new Pikachu(100, 28);
-//        //Charizard c1 = new Charizard(200, 40, new Jetpack());
-//        Charizard c1 = new Charizard(200, 40, new Wings());
-//        //c1.setFlyingTool(new Wings());
+////        pokemons.Pikachu p2 = new pokemons.Pikachu(100, 28);
+//        //pokemons.Charizard c1 = new pokemons.Charizard(200, 40, new fly.Jetpack());
+//        pokemons.Charizard c1 = new pokemons.Charizard(200, 40, new fly.Wings());
+//        //c1.setFlyingTool(new fly.Wings());
 //        c1.performFlyable();
-////        Squirtle s1 = new Squirtle(120, 21);
+////        pokemons.Squirtle s1 = new pokemons.Squirtle(120, 21);
 //
 //        System.out.println("배틀 시작!");
 //        System.out.println(p1);

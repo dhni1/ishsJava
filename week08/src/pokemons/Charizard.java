@@ -1,3 +1,7 @@
+package pokemons;
+
+import fly.Wings;
+
 public class Charizard extends Pokemon {
     public Charizard(int hp, int attackPower, Wings wings){
         super("리자몽", hp, attackPower, wings);  // 부모클래스의 생성자 호출
