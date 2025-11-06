@@ -1,17 +1,33 @@
 import fly.NoFly;
 import fly.Wings;
-import pokemons.Charizard;
-import pokemons.Pikachu;
-import pokemons.Pokemon;
-import pokemons.Squirtle;
+import pokemons.*;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.StringJoiner;
 
 public class GameDemo {
     public static void main(String[] args) {
 //        int randomNumber = (int)(Math.random() * 3); // 0 ~ 2
 //        System.out.println(randomNumber);
+        Skill[] pikachuSkills = {
+                new Skill("Nuzzle", 20),
+                new Skill("ThunderShock", 40),
+                new Skill("Quick Attack", 40)
+        };
+
+        Skill[] squirtleSkills = {
+                new Skill("Tackle", 40),
+                new Skill("Water Gun", 40),
+                new Skill("Rapid Spin", 50)
+        };
+
+        Skill[] charizardSkills = {
+                new Skill("Scratch", 40),
+                new Skill("Dragon Breath", 60),
+                new Skill("Flare Blitz", 120)
+        };
+
 
         Pokemon playerPokemon = null;
         Scanner scanner = new Scanner(System.in);
@@ -21,13 +37,13 @@ public class GameDemo {
                 System.out.print("플레이어 포켓몬스터 선택\n1) 피카츄  2) 꼬부기  3) 리자몽 : ");
                 int number = scanner.nextInt();  // string
                 if (number-1 == 0){
-                    playerPokemon = new Pikachu(100, 27, new NoFly());
+                    playerPokemon = new Pikachu(100, 27, new NoFly(), pikachuSkills);
                     break;
                 }else if(number-1 == 1){
-                    playerPokemon = new Squirtle(120, 21, new NoFly());
+                    playerPokemon = new Squirtle(120, 21, new NoFly(), squirtleSkills);
                     break;
                 }else if (number-1 == 2){
-                    playerPokemon = new Charizard(200, 40, new Wings());
+                    playerPokemon = new Charizard(200, 40, new Wings(), charizardSkills);
                     break;
                 }else
                     System.out.println("메뉴에서 골라주세요");
@@ -42,11 +58,11 @@ public class GameDemo {
         Pokemon enemyPokemon;
         System.out.println("야생의 포켓몬스터 나타났습니다");
         if(randomNumber == 0)
-            enemyPokemon = new Pikachu(100, 27, new NoFly());
+            enemyPokemon = new Pikachu(100, 27, new NoFly(), pikachuSkills);
         else if (randomNumber == 1)
-            enemyPokemon = new Squirtle(120, 21, new NoFly());
+            enemyPokemon = new Squirtle(120, 21, new NoFly(), squirtleSkills);
         else if (randomNumber == 2)
-            enemyPokemon = new Charizard(200, 40, new Wings());
+            enemyPokemon = new Charizard(200, 40, new Wings(), charizardSkills);
 
 
 
