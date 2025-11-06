@@ -55,7 +55,7 @@ public class GameDemo {
 
 
         int randomNumber = (int)(Math.random() * 3); // 0 ~ 2
-        Pokemon enemyPokemon;
+        Pokemon enemyPokemon = null;
         System.out.println("A Wild Pokemon Appeared!");
         if(randomNumber == 0)
             enemyPokemon = new Pikachu(100, 27, new NoFly(), pikachuSkills);
@@ -70,6 +70,13 @@ public class GameDemo {
         for(int i = 0; i < playerPokemon.skills.length; i++){
             System.out.println((i+1) + ". " + playerPokemon.skills[i].getName() + " ("+ playerPokemon.skills[i].getDamage()+")");
         }
+
+        System.out.print("Select skill : ");
+        int skillNumber = scanner.nextInt() - 1;
+
+        enemyPokemon.setHp(enemyPokemon.getHp()-playerPokemon.skills[skillNumber].getDamage());
+        System.out.println(enemyPokemon.getName() + " HP is " + enemyPokemon.getHp() + " left");
+
 
 //        pokemons.Pokemon playerPokemon = new pokemons.Pikachu(100, 27, new fly.NoFly());
 //        pokemons.Pokemon playerPokemon = new pokemons.Charizard(200, 40, new fly.Wings());
