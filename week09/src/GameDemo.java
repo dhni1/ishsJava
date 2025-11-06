@@ -34,7 +34,7 @@ public class GameDemo {
 
         try{
             while (true){
-                System.out.print("플레이어 포켓몬스터 선택\n1) 피카츄  2) 꼬부기  3) 리자몽 : ");
+                System.out.print("Select Player Pokemon\n1) Pikachu  2) Squirtle  3) Charizard : ");
                 int number = scanner.nextInt();  // string
                 if (number-1 == 0){
                     playerPokemon = new Pikachu(100, 27, new NoFly(), pikachuSkills);
@@ -46,7 +46,7 @@ public class GameDemo {
                     playerPokemon = new Charizard(200, 40, new Wings(), charizardSkills);
                     break;
                 }else
-                    System.out.println("메뉴에서 골라주세요");
+                    System.out.println("Select in Menu");
             }
         }catch (InputMismatchException err){
             System.out.println("숫자로 입력하세요. 메뉴에서 고르세요.");
@@ -56,7 +56,7 @@ public class GameDemo {
 
         int randomNumber = (int)(Math.random() * 3); // 0 ~ 2
         Pokemon enemyPokemon;
-        System.out.println("야생의 포켓몬스터 나타났습니다");
+        System.out.println("A Wild Pokemon Appeared!");
         if(randomNumber == 0)
             enemyPokemon = new Pikachu(100, 27, new NoFly(), pikachuSkills);
         else if (randomNumber == 1)
@@ -64,7 +64,12 @@ public class GameDemo {
         else if (randomNumber == 2)
             enemyPokemon = new Charizard(200, 40, new Wings(), charizardSkills);
 
+        System.out.println("Battle Start!");
+        System.out.println("===================");
 
+        for(int i = 0; i < playerPokemon.skills.length; i++){
+            System.out.println((i+1) + ". " + playerPokemon.skills[i].getName() + " ("+ playerPokemon.skills[i].getDamage()+")");
+        }
 
 //        pokemons.Pokemon playerPokemon = new pokemons.Pikachu(100, 27, new fly.NoFly());
 //        pokemons.Pokemon playerPokemon = new pokemons.Charizard(200, 40, new fly.Wings());
@@ -79,12 +84,12 @@ public class GameDemo {
 //        p1.setFlyingTool(jetpack);  // 젯팩 추진기 득템
 //        p1.performFlyable();
 //
-////        pokemons.Pikachu p2 = new pokemons.Pikachu(100, 28);
+//        pokemons.Pikachu p2 = new pokemons.Pikachu(100, 28);
 //        //pokemons.Charizard c1 = new pokemons.Charizard(200, 40, new fly.Jetpack());
 //        pokemons.Charizard c1 = new pokemons.Charizard(200, 40, new fly.Wings());
 //        //c1.setFlyingTool(new fly.Wings());
 //        c1.performFlyable();
-////        pokemons.Squirtle s1 = new pokemons.Squirtle(120, 21);
+//        pokemons.Squirtle s1 = new pokemons.Squirtle(120, 21);
 //
 //        System.out.println("배틀 시작!");
 //        System.out.println(p1);
