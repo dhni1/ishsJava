@@ -3,7 +3,7 @@ public class SingleThreadExample {
         for(int i = 1; i<=5; i++){
             System.out.println(name + "thread" + i);
             try {
-                Thread.sleep(500); // 0.5초 대기
+                Thread.sleep(500); // 0.5sec wait
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
